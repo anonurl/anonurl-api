@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/anonurl/anonurl-api/database"
-	"github.com/gin-gonic/gin"
+    ct "github.com/anonurl/anonurl-api/controllers"
+    "github.com/gin-gonic/gin"
 )
 
 type CreateBody struct {
@@ -21,5 +21,5 @@ func Create(c *gin.Context) {
         return
     }
 
-    database.CreateURL(c, createBody.URL)
+    ct.CreateURL(c, createBody.URL)
 }

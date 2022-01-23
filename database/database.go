@@ -22,7 +22,7 @@ type Report struct {
 var (
     clientOptions = options.Client().ApplyURI(os.Getenv("MONGO_URI"))
     client, _ = mongo.Connect(context.TODO(), clientOptions)
-    ctx, _ = context.WithTimeout(context.Background(), 10 * time.Second)
-    urls = client.Database("anonurl").Collection("urls")
-    reports = client.Database("anonurl").Collection("reports")
+    Ctx, _ = context.WithTimeout(context.Background(), 10 * time.Second)
+    Urls = client.Database("anonurl").Collection("urls")
+    Reports = client.Database("anonurl").Collection("reports")
 )

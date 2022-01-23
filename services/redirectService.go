@@ -1,12 +1,12 @@
 package services
 
 import (
-    "github.com/anonurl/anonurl-api/database"
+    ct "github.com/anonurl/anonurl-api/controllers"
     "github.com/gin-gonic/gin"
 )
 
 func Redirect(c *gin.Context) {
     urlID := c.Param("id")
 
-    database.RedirectURL(c, urlID) 
+    ct.RedirectURL(c, urlID) 
 }

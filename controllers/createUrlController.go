@@ -1,10 +1,11 @@
-package database
+package controllers
 
 import (
 	"crypto/rand"
 	"math/big"
 	"time"
         "github.com/gin-gonic/gin"
+        db "github.com/anonurl/anonurl-api/database"
 )
 
 func generateID() string {
@@ -29,7 +30,7 @@ func CreateURL(c *gin.Context, url string) {
         time.Now(),
     }
 
-    urls.InsertOne(ctx, urlCreate)
+    db.Urls.InsertOne(db.Ctx, urlCreate)
     
     c.JSON(200, gin.H {
         "url": url,

@@ -1,7 +1,7 @@
 package services
 
 import (
-    "github.com/anonurl/anonurl-api/database"
+    ct "github.com/anonurl/anonurl-api/controllers"
     "github.com/gin-gonic/gin"
 )
 
@@ -25,5 +25,5 @@ func Report(c *gin.Context) {
         return
     }
 
-    database.ReportURL(c, reportBody.Message)
+    ct.ReportURL(c, reportBody.Message)
 }
