@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/anonurl/anonurl-api/services"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -15,5 +17,5 @@ func main() {
     router.GET("/api/redirect/:id", func(c *gin.Context) { services.Redirect(c) })
     router.GET("/api/track/:id", func(c *gin.Context) { services.Track(c) })
 
-    router.Run(":3001")
+    router.Run(os.Getenv("PORT"))
 }

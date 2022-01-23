@@ -33,7 +33,7 @@
 `cd anonurl-api`
 
 ### Configurate:
-- Add your Mongo URI to "MONGO_URI" on .env file
+- Add your Mongo URI to "MONGO_URI" on enviroments variables
 
 ### Install all dependencies:
 `go get`
