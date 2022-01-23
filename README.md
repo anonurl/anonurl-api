@@ -9,8 +9,8 @@
 [Setup](https://github.com/anonurl/anonurl-api#setup)<br>
 
 <br><a name="changelog"></a>
-## ♻️ Changelog (v1.0.0)
-- Initial commit (Transcoded API from JS to Go)
+## ♻️ Changelog (v1.0.0b)
+- Some fixes
 
 <br><a name="usedtech"></a>
 ## ⚙️ Used technologies:

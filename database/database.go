@@ -21,3 +21,6 @@ type Report struct {
 
 var clientOptions = options.Client().ApplyURI(os.Getenv("MONGO_URI"))
 var client, _ = mongo.Connect(context.TODO(), clientOptions)
+var ctx, _ = context.WithTimeout(context.Background(), 10 * time.Second)
+var urls = client.Database("anonurl").Collection("urls")
+var reports = client.Database("anonurl").Collection("reports")

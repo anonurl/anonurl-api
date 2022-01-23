@@ -1,16 +1,8 @@
 package database
 
-import (
-    "context"
-    "time"
-
-    "github.com/gin-gonic/gin"
-)
+import "github.com/gin-gonic/gin"
 
 func ReportURL(c *gin.Context, message string) {
-    ctx, _ := context.WithTimeout(context.Background(), 10 * time.Second)
-    reports := client.Database("anonurl").Collection("reports")
-
     reportCreate := Report {
         message,
     }

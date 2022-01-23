@@ -1,7 +1,6 @@
 package database
 
 import (
-	"context"
 	"crypto/rand"
 	"math/big"
 	"time"
@@ -22,9 +21,6 @@ func generateID() string {
 }
 
 func CreateURL(c *gin.Context, url string) {
-    ctx, _ := context.WithTimeout(context.Background(), 10 * time.Second)
-    urls := client.Database("anonurl").Collection("urls")
-
     id := generateID()
 
     urlCreate := URL {
