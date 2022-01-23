@@ -17,5 +17,5 @@ func main() {
     router.GET("/api/redirect/:id", func(c *gin.Context) { services.Redirect(c) })
     router.GET("/api/track/:id", func(c *gin.Context) { services.Track(c) })
 
-    router.Run(os.Getenv("PORT"))
+    router.Run(":" + os.Getenv("PORT"))
 }

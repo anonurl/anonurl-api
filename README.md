@@ -34,6 +34,7 @@
 
 ### Configurate:
 - Add your Mongo URI to "MONGO_URI" on enviroments variables
+- Add a port to "PORT" enviroment variable
 
 ### Install all dependencies:
 `go get`
