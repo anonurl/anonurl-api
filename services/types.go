@@ -1,13 +1,21 @@
-package controllers
+package services
 
 import "time"
 
-type URL struct {
+type URLs struct {
     URL string `bson:"url"`
     ID string `bson:"id"`
     Create time.Time `bson:"create"`
 }
 
-type Report struct {
+type Reports struct {
     Message string `bson:"message"`
+}
+
+type ReportBody struct {
+    Message string
+}
+
+type CreateBody struct {
+    URL string
 }
