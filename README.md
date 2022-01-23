@@ -10,6 +10,7 @@
 
 <br><a name="changelog"></a>
 ## ♻️ Changelog (v1.0.0b)
+- Modulated database and services
 - Some fixes
 
 <br><a name="usedtech"></a>
