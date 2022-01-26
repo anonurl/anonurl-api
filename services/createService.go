@@ -44,8 +44,6 @@ func Create(c *gin.Context) {
     db.Urls.InsertOne(db.Ctx, urlCreate)
     
     c.JSON(200, gin.H {
-        "url": createBody.URL,
         "id": id,
-        "create": time.Now(),
     }) 
 }

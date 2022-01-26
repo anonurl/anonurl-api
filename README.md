@@ -9,8 +9,7 @@
 [Setup](https://github.com/anonurl/anonurl-api#setup)<br>
 
 <br><a name="changelog"></a>
-## ♻️ Changelog (v1.0.0b)
-- Modulated database and services
+## ♻️ Changelog (v1.0.0c)
 - Some fixes
 
 <br><a name="usedtech"></a>
