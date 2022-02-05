@@ -1,11 +1,9 @@
 package services
 
-import "time"
-
 type URLs struct {
     URL string `bson:"url"`
     ID string `bson:"id"`
-    Create time.Time `bson:"create"`
+    Create string `bson:"create"`
 }
 
 type Reports struct {

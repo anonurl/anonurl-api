@@ -38,7 +38,7 @@ func Create(c *gin.Context) {
     urlCreate := URLs {
         createBody.URL,
         id,
-        time.Now(),
+        time.Now().Format("01/02/2006 15:04"),
     }
 
     db.Urls.InsertOne(db.Ctx, urlCreate)

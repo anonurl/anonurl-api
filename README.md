@@ -9,8 +9,8 @@
 [Setup](https://github.com/anonurl/anonurl-api#setup)<br>
 
 <br><a name="changelog"></a>
-## ♻️ Changelog (v1.0.0c)
-- Some fixes
+## ♻️ Changelog (v1.0.1)
+- ***Fixed API calls***
 
 <br><a name="usedtech"></a>
 ## ⚙️ Used technologies:
