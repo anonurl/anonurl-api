@@ -34,14 +34,11 @@ func Create(c *gin.Context) {
     }
 
     id := generateID()
-
-    urlCreate := URLs {
-        createBody.URL,
-        id,
-        time.Now().Format("01/02/2006 15:04"),
-    }
-
-    db.Urls.InsertOne(db.Ctx, urlCreate)
+    db.Urls.InsertOne(db.Ctx, URL {
+        URL: createBody.URL,
+        ID: id,
+        Create: time.Now().Format("01/02/2006 15:04"),
+    })
     
     c.JSON(200, gin.H {
         "id": id,

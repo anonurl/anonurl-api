@@ -1,11 +1,12 @@
 package main
 
 import (
-	"os"
+    "os"
+    "fmt"
 
-	"github.com/anonurl/anonurl-api/services"
-	"github.com/gin-contrib/cors"
-	"github.com/gin-gonic/gin"
+    "github.com/anonurl/anonurl-api/services"
+    "github.com/gin-contrib/cors"
+    "github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -17,5 +18,5 @@ func main() {
     router.GET("/api/redirect/:id", func(c *gin.Context) { services.Redirect(c) })
     router.GET("/api/track/:id", func(c *gin.Context) { services.Track(c) })
 
-    router.Run(":" + os.Getenv("PORT"))
+    router.Run(fmt.Sprintf(":%v", os.Getenv("PORT")))
 }

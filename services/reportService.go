@@ -1,8 +1,8 @@
 package services
 
 import (
-	db "github.com/anonurl/anonurl-api/database"
-	"github.com/gin-gonic/gin"
+    db "github.com/anonurl/anonurl-api/database"
+    "github.com/gin-gonic/gin"
 )
 
 func Report(c *gin.Context) {
@@ -17,13 +17,9 @@ func Report(c *gin.Context) {
         return
     }
 
-    reportCreate := Reports {
+    db.Reports.InsertOne(db.Ctx, Reports {
         reportBody.Message,
-    }
-
-    db.Reports.InsertOne(db.Ctx, reportCreate)
-
-    c.JSON(200, gin.H {
-        "message": "Thanks for contributing.",
     })
+
+    c.Status(200)
 }

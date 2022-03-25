@@ -1,6 +1,6 @@
 package services
 
-type URLs struct {
+type URL struct {
     URL string `bson:"url"`
     ID string `bson:"id"`
     Create string `bson:"create"`
